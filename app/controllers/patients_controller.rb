@@ -1,6 +1,10 @@
 class PatientsController < ApplicationController
 
+  def index
+    @patients = Patient.all
+  end
+
   def show 
-    @patient = Patients.find_by(id: params[:id])
+    @patient = Patient.find_by(id: params[:id])
   end
 end
